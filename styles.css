@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+.MG-open:checked+.MG-item {
+    position:absolute;
+    top:25%;
+    left:25%;
+    opacity: 100;}
+.MG-item {
+    position: relative; left:80px; top:2px;
+    opacity: 0;}
+.MG-item Image {
+    display: block;
+    height: 50%;
+    max-width: 100%;}
+.MG-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    margin-left: -5rem;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;}
+.MG-control.prev {
+    left: 2%;}
+.MG-control.next {
+    right: 2%;}
+.MG-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #b30f0f;}
+#MG-1:checked~.control-1,
+#MG-2:checked~.control-2,
+#MG-3:checked~.control-3 {
+    display: block;}
+.MG-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;}
+.MG-indicators li {
+    display: inline-block;
+    margin: 0 5px;}
+.MG-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;}
+.MG-bullet:hover {
+    color: #aaaaaa;}
+#MG-1:checked~.control-1~.MG-indicators li .MG-bullet,
+#MG-2:checked~.control-2~.MG-indicators li .MG-bullet,
+#MG-3:checked~.control-3~.MG-indicators li .MG-bullet {
+    color: #333;}
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: #333;}
+header {
+    width: 100%;
+    height: 100vh;
+    position: relative;}
+a {
+    text-decoration: none;
+    color: inherit;}
+.menu-toggle {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    display: none;
+    z-index: 999;}
+.zero-times {
+    font-size: 3.5rem;}
+.zero-times {
+    display: none !important;
+    cursor: pointer;}
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, .075);
+    z-index: 1000;}
+.logo {
+    width: auto;
+    box-sizing: content-box;
+    padding-left: 6rem;}
+.logo Image {
+    display: block;
+    width: 250%;}
+nav ul {
+    height: 8rem;
+    list-style: none;
+    display: flex;
+    font-size: 1.4rem;}
+nav ul li {
+    padding: 0 3rem;
+    line-height: 8rem;
+    transition: background-color .5s;}
+nav ul li:hover {
+    background-color: rgba(0, 0, 0, 0.075)}
+.nav-right ul li {
+    border-right: rgba(0, 0, 0, 0.075);}
+.nav-right ul li {
+    border-left: 1px solid rgba(0, 0, 0, .075);}
+.nav-right ul li {
+    border-right: none;}
+.nav-right i {
+    margin-right: 1rem;}
+.nav-right i {
+    margin-right: 0;}
+.main {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;}
+.ID-1 {
+    background-color: #80b3dd;
+    height: 100vh;
+    flex: 1;}
+.ID-2 {
+    background-color: #ffffff;
+    height: 100vh;
+    flex: 1;
+    position: relative;}
+.ID-2 Image {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: -15rem;
+    transform: translateY(-50%);}
+.product-info {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;}
+.product-info h1 {
+    font-size: 5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    font-weight: 100;
+    margin-bottom: 1rem;
+    text-align: center;}
+.product-info p {
+    font-size: 1.8rem;
+    margin-bottom: 4rem;}
+.product-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5rem;}
+.button {
+    display: flex;
+    padding: 2rem;
+    color: #b41ba8;
+    background-color: #e2e2e2;
+    font-size: 1.5rem;
+    font-weight: 900;
+    transition: all .5s;}
+.info-buttons {
+    display: flex;}
+.button discover-button {
+    background-color: #a4a4a4;}
+.cart-button {
+    background-color: #141110;}
+.discover-button:hover,
+.cart-button:hover {
+    box-shadow: 3px 1rem 2rem rgba(0, 0, 0, .3);
+    transform: translateY(-1rem);}
+@media screen and (max-width: 1200px) {
+    nav ul li {
+        padding: 0 2rem;}
+    .ID-2 Image {
+        left: -8rem;}
+    .product-info h3 {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;}
+    .product-info p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;}
+    .product-info h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;}
+    .button {
+        padding: 1.5rem;
+        font-size: 1rem;}   }
+@media screen and (max-width: 900px) {
+    .logo {
+        padding-left: 1.5rem;}
+    nav ul {
+        height: 5rem;
+        font-size: 1.4rem;}
+    nav ul li {
+        padding: 0 1rem;
+        line-height: 5rem;}
+    .ID-2 Image {
+        left: -5rem;}   }
+@media screen and (max-width: 600px) {
+    .main {
+        display: flex;
+        flex-direction: column;}
+    .product-info {
+        align-content: unset;
+        justify-content: unset;}
+    .product-info h1 {
+        margin-top: 10rem;}
+    .ID-2 {
+        all: unset;}
+    .ID-2 Image {
+        width: 70%;
+        margin-top: 20%;
+        margin-left: 20%;}
+    .MG-control {
+        background: rgba(0, 0, 0, 0.28);
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+        display: none;
+        font-size: 40px;
+        height: 40px;
+        line-height: 35px;
+        position: absolute;
+        margin: 0 1rem;
+        top: 65%;
+        -webkit-transform: translate(0, -50%);
+        cursor: pointer;
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        text-align: center;
+        width: 40px;
+        z-index: 10;}
+    .ID-1 {
+        height: 100vh;}
+    .ID-2 Image {
+        left: -2.5rem;}
+    .product-info p {
+        font-size: 1.2rem;}
+    .button {
+        padding: 1rem;}
+    nav {
+        display: flex;
+        border-bottom: none;
+        flex-direction: column;
+        width: 25rem;
+        height: 100vh;
+        background-color: #f7f7f6;
+        justify-content: space-evenly;
+        transform: translateX(-25rem);
+        transition: transform .5s;}
+    nav ul {
+        height: initial;
+        display: block;
+        font-size: 2rem;
+        text-align: center}
+    nav ul li {
+        padding: 0;
+        line-height: initial;
+        margin-bottom: 2rem;}
+    .logo {
+        padding: 0;}
+    .nav-right ul li {
+        border: none;}
+    .menu-toggle {
+        display: flex;}
+    .zero-times {
+        display: block !important;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;}
+    .active {
+        transform: translateX(0);}
+    .overlay {
+        position: absolute;
+        width: 0;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .8);
+        z-index: 998;
+        opacity: 0;
+        transition: opacity 0.5s;}
+    .overlay.menu-open {
+        width: 100%;
+        opacity: 1;}    }
+@media screen and (max-width: 400px) {
+    .product-info {
+        align-content: unset;
+        justify-content: unset;}
+    .product-info h3 {
+        margin-top: 5rem;}
+    .ID-2 {
+        all: unset;}
+    .ID-2 Image {
+        width: 70%;
+        margin-top: 40%;
+        margin-left: 20%;}
+    .MG-control {
+        top: 75%;}
+    .MG-indicators {
+        bottom: 5%;}
+         .alert {
+            padding: 20px;
+            background-color: #f44336;
+            color: white;}
+          .closebutton {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;}
+          .closebutton:hover {
+            color: black;}  }
+td {text-align: left;}
+th {text-align: left;
+background-color: rgba(255, 255, 255, 0.521);}
+tr:hover {background-color: #f0dae1}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	font-family: 'Poppins', sans-serif;}
+.border{
+	max-width: 1170px;
+	margin:auto;}
+.row{
+	display: flex;
+	flex-wrap: wrap;}
+ul{
+	list-style: none;}
+.footer{
+	background-color: #24262b;
+    padding: 23px 0;}
+.footer-colum{
+   width: 25%;
+   padding: 0 15px;}
+.footer-colum h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;}
+.footer-colum h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;}
+.footer-colum ul li:not(:last-child){
+	margin-bottom: 10px;}
+.footer-colum ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;}
+.footer-colum ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;}
+.footer-colum .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;}
+.footer-colum .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;}
+@media(max-width: 767px){
+  .footer-colum{
+    width: 50%;
+    margin-bottom: 30px;}   }
+@media(max-width: 574px){
+  .footer-colum{
+    width: 100%;}   } 
+element.style {
+background:rgb(159, 207, 223);}
+#x{
+    background:rgb(159, 207, 223);
+font-size:30px;}
+.contact
+{background:lightblue; margin:10;padding:0 }
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;}
+.card{
+    background-color: rgba(247, 246, 248, 0.712);}
